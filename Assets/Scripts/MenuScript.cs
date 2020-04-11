@@ -8,8 +8,8 @@ public class MenuScript : MonoBehaviour
     public GameObject settingsObject;
     public void play()
     {
-        //gameObject.SetActive(false);
-        Debug.Log("Level menusu acildi.");
+        gameObject.SetActive(false);
+        levelObject.SetActive(true);
     }
     public void settings()
     {

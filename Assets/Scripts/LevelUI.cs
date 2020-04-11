@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelUI : MonoBehaviour
 {
+    //not: farkettim ki kodu fazla uzatmışım kafaya takma bu kod hertürlü baştan yazılacak çünkü
     bool pauseMode = false;
+    LevelManager levelManager;
     int health = 5;
     int score = 0;
     public Text tHealth;
@@ -30,6 +33,8 @@ public class LevelUI : MonoBehaviour
             restart.SetActive(true);
             pauseMode = true;
             GameOver.SetActive(true);
+            levelManager.deneme = 1;
+            //levelManager.tLevel1.text = "Level1 = Kaybedildi";
         }
         if (score == 5)
         {
@@ -39,6 +44,7 @@ public class LevelUI : MonoBehaviour
             restart.SetActive(true);
             pauseMode = true;
             YouWin.SetActive(true);
+            //levelManager.tLevel1.text = "Level1 = Kazanıldı";
         }
     }
     public void Pause() //oyunu durdurur-devam ettirir
@@ -51,6 +57,7 @@ public class LevelUI : MonoBehaviour
             home.SetActive(true);
             restart.SetActive(true);
             pauseMode = true;
+
         }
         else if (pauseMode)
         {
@@ -74,7 +81,7 @@ public class LevelUI : MonoBehaviour
     }
     public void goHome() //menuye doner
     {
-        Debug.Log("Menuye donuldu");
+        SceneManager.LoadScene("menu");
     }
     public void restartGame() //Oyunu yeniden başlatır (kazanma veya kaybetme durumunda)
     {
