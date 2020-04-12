@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class MenuScript : MonoBehaviour
 {
-    public GameObject levelObject;
-    public GameObject settingsObject;
+    public GameObject levelMenu;
+    public GameObject settingsMenu;
     public void play()
     {
         gameObject.SetActive(false);
-        levelObject.SetActive(true);
+        levelMenu.SetActive(true);
     }
     public void settings()
     {
         gameObject.SetActive(false);
-        settingsObject.SetActive(true);
+        settingsMenu.SetActive(true);
     }
     public void quit()
     {
