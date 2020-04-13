@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 7701ef06a3ec80e40894d9c618258d02
+guid: cb37471c1a355d94b8a687bbf3edb923
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8512464307235642728
-    second: MezStr_Stars_0
+      213: -2975023201718892967
+    second: SpaceMan_Falling_Sheet_0
   - first:
-      213: 9074135473192249824
-    second: MezStr_Stars_1
+      213: 6887866613199770223
+    second: SpaceMan_Falling_Sheet_1
   - first:
-      213: 4177478713163952583
-    second: MezStr_Stars_2
+      213: 1027437294345414608
+    second: SpaceMan_Falling_Sheet_2
   - first:
-      213: 5615164248789000482
-    second: MezStr_Stars_3
-  - first:
-      213: 2772360122010165950
-    second: MezStr_Stars_4
-  - first:
-      213: 6889591766583711969
-    second: MezStr_Stars_5
+      213: -6087840117346955326
+    second: SpaceMan_Falling_Sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,13 +111,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MezStr_Stars_0
+      name: SpaceMan_Falling_Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1200
-        height: 2000
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 892270440d6add980800000000000000
-      internalID: -8512464307235642728
+      spriteID: 956000f092896b6d0800000000000000
+      internalID: -2975023201718892967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MezStr_Stars_1
+      name: SpaceMan_Falling_Sheet_1
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 160
         y: 0
-        width: 1200
-        height: 2000
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e92563d22ecded70800000000000000
-      internalID: 9074135473192249824
+      spriteID: f629b04f03e969f50800000000000000
+      internalID: 6887866613199770223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MezStr_Stars_2
+      name: SpaceMan_Falling_Sheet_2
       rect:
         serializedVersion: 2
-        x: 2400
+        x: 320
         y: 0
-        width: 1200
-        height: 2000
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c1b4e2a1c269f930800000000000000
-      internalID: 4177478713163952583
+      spriteID: 0d7627e86c0324e00800000000000000
+      internalID: 1027437294345414608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MezStr_Stars_3
+      name: SpaceMan_Falling_Sheet_3
       rect:
         serializedVersion: 2
-        x: 3600
+        x: 480
         y: 0
-        width: 1200
-        height: 2000
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,50 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 221aa8442221ded40800000000000000
-      internalID: 5615164248789000482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MezStr_Stars_4
-      rect:
-        serializedVersion: 2
-        x: 4800
-        y: 0
-        width: 1200
-        height: 2000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb2efd5a7d6697620800000000000000
-      internalID: 2772360122010165950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MezStr_Stars_5
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 0
-        width: 1200
-        height: 2000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e89da6853fbc9f50800000000000000
-      internalID: 6889591766583711969
+      spriteID: 2cf89240ba5a38ba0800000000000000
+      internalID: -6087840117346955326
       vertices: []
       indices: 
       edges: []
