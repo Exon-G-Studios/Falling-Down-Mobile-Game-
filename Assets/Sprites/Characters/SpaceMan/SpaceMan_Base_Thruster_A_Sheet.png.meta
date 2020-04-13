@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 3ce404391223934439a48a289878bda4
+guid: 48c1c3533d9f36e498ffd5382b7dfe27
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8085221989875485734
-    second: MezStr_Junks_0
+      213: -5564343412897122924
+    second: SpaceMan_Base_Thruster_A_Sheet_0
   - first:
-      213: 1270696294755571373
-    second: MezStr_Junks_1
+      213: 4353209395214164346
+    second: SpaceMan_Base_Thruster_A_Sheet_1
   - first:
-      213: 3881640100950764352
-    second: MezStr_Junks_2
+      213: -6053003084500475248
+    second: SpaceMan_Base_Thruster_A_Sheet_2
   - first:
-      213: 5362345102841550301
-    second: MezStr_Junks_3
-  - first:
-      213: 6653951477764651101
-    second: MezStr_Junks_4
-  - first:
-      213: 1836633264933361493
-    second: MezStr_Junks_5
+      213: -2204806559002105088
+    second: SpaceMan_Base_Thruster_A_Sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,13 +111,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MezStr_Junks_0
+      name: SpaceMan_Base_Thruster_A_Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1200
-        height: 2000
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad37b4300758bcf80800000000000000
-      internalID: -8085221989875485734
+      spriteID: 4957bf9a52b77c2b0800000000000000
+      internalID: -5564343412897122924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MezStr_Junks_1
+      name: SpaceMan_Base_Thruster_A_Sheet_1
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 160
         y: 0
-        width: 1200
-        height: 2000
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da69f423c8b62a110800000000000000
-      internalID: 1270696294755571373
+      spriteID: a7122a271e4b96c30800000000000000
+      internalID: 4353209395214164346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MezStr_Junks_2
+      name: SpaceMan_Base_Thruster_A_Sheet_2
       rect:
         serializedVersion: 2
-        x: 2400
+        x: 320
         y: 0
-        width: 1200
-        height: 2000
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04be4132b1b5ed530800000000000000
-      internalID: 3881640100950764352
+      spriteID: 092610cc3c96ffba0800000000000000
+      internalID: -6053003084500475248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MezStr_Junks_3
+      name: SpaceMan_Base_Thruster_A_Sheet_3
       rect:
         serializedVersion: 2
-        x: 3600
+        x: 480
         y: 0
-        width: 1200
-        height: 2000
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,50 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd51de9c570ea6a40800000000000000
-      internalID: 5362345102841550301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MezStr_Junks_4
-      rect:
-        serializedVersion: 2
-        x: 4800
-        y: 0
-        width: 1200
-        height: 2000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d58f8d86d95975c50800000000000000
-      internalID: 6653951477764651101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MezStr_Junks_5
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 0
-        width: 1200
-        height: 2000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 557d40b39380d7910800000000000000
-      internalID: 1836633264933361493
+      spriteID: 00b6a3cbd14f661e0800000000000000
+      internalID: -2204806559002105088
       vertices: []
       indices: 
       edges: []
