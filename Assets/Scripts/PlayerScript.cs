@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    public Rigidbody2D rb2d;
+    protected Rigidbody2D rb2d;
     public float speed = 5;
     Vector2 vec;
     int slot;
+
+    void Start()
+    {
+        rb2d = this.gameObject.GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
