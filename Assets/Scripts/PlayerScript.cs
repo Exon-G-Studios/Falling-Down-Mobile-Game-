@@ -9,9 +9,13 @@ public class PlayerScript : MonoBehaviour
     Vector2 vec;
     int slot;
 
+    protected ParticleSystem particelSys;
+
     void Start()
     {
         rb2d = this.gameObject.GetComponent<Rigidbody2D>();
+        particelSys = GetComponent<ParticleSystem>();
+        particelSys.Stop(true);
     }
 
     void Update()
@@ -21,5 +25,11 @@ public class PlayerScript : MonoBehaviour
         vec = new Vector2(horizontal, vertical);
 
         rb2d.velocity = vec * speed;
+
+        if(vertical > 0)
+        {
+            particelSys.Emit(1);
+        }
+
     }
 }

@@ -25,7 +25,6 @@ public class FallingEffect : MonoBehaviour
             cor_x = (Random.Range(-1.3f, 1.3f) * SpacingAmount) / 65;
             cor_y = (Random.Range(-0.8f, 0.8f) * SpacingAmount) / 65;
             player.transform.Translate(cor_x, cor_y, 0);
-            Debug.Log(cor_x);
         }
     }
 }
