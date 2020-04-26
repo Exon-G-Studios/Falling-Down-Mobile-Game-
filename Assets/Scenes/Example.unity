@@ -216,9 +216,9 @@ GameObject:
   - component: {fileID: 589342435}
   - component: {fileID: 589342434}
   - component: {fileID: 589342439}
+  - component: {fileID: 589342441}
   - component: {fileID: 589342438}
   - component: {fileID: 589342437}
-  - component: {fileID: 589342441}
   - component: {fileID: 589342440}
   m_Layer: 0
   m_Name: SpaceMan_Base
