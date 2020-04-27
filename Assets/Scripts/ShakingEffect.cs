@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingEffect : MonoBehaviour
+public class ShakingEffect : MonoBehaviour
 {
     protected GameObject player;
     protected float cor_x, cor_y;
+    [HideInInspector]                   //Hides next declared variable in inspector (Very usefull for hiding unnecessary variables)
     public bool isDisable = false;
     public float SpacingAmount = 1;
 

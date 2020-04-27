@@ -11,9 +11,11 @@ public class PlayerScript : MonoBehaviour
     Vector2 vec;
     int slot;
 
+    protected float horizontal, vertical;
+
     protected ParticleSystem particelSys;
     protected Animator animator;
-    protected FallingEffect fallingEffect;
+    protected ShakingEffect shakingEffect;
 
     void Start()
     {
@@ -21,29 +23,30 @@ public class PlayerScript : MonoBehaviour
         particelSys = GetComponent<ParticleSystem>();
         particelSys.Stop(true);
         animator = this.gameObject.GetComponent<Animator>();
-        fallingEffect = this.gameObject.GetComponent<FallingEffect>();
+        shakingEffect = this.gameObject.GetComponent<ShakingEffect>();
     }
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical") * 1.25f;
         vec = new Vector2(horizontal, vertical);
 
-        rb2d.velocity = vec * speed;
+        rb2d.velocity += (vec / 50) * speed;            //Yoktan Aklıma Gelmiş Olan Bir Velocity Formülü, Sürüklenmeyede Yarıyor
+        Debug.Log(rb2d.velocity);
 
 
-        //Partikül Sistemini Devreye Sokan Yapı
+        //Partikül Sistemini ve Düşme Efektini Devreye Sokan Yapı
         if(vertical > 0)
         {
             animator.SetBool("isFalling", false);
             particelSys.Emit(1);
-            if(disableEffect == false) { fallingEffect.isDisable = true; }
+            if(disableEffect == false) { shakingEffect.isDisable = false; }
         }
         else
         {
             animator.SetBool("isFalling", true);
-            if(disableEffect == true) { fallingEffect.isDisable = false; }
+            if(disableEffect == true) { shakingEffect.isDisable = true; }
         }
 
     }
