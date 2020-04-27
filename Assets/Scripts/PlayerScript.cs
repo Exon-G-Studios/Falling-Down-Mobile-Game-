@@ -43,7 +43,7 @@ public class PlayerScript : MonoBehaviour
         else
         {
             animator.SetBool("isFalling", true);
-            if(disableEffect == false) { fallingEffect.isDisable = true; }
+            if(disableEffect == true) { fallingEffect.isDisable = false; }
         }
 
     }
