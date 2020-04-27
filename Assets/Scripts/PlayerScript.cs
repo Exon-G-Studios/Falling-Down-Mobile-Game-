@@ -16,6 +16,8 @@ public class PlayerScript : MonoBehaviour
         rb2d = this.gameObject.GetComponent<Rigidbody2D>();
         particelSys = GetComponent<ParticleSystem>();
         particelSys.Stop(true);
+
+       
     }
 
     void Update()
@@ -24,9 +26,11 @@ public class PlayerScript : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         vec = new Vector2(horizontal, vertical);
 
-        rb2d.velocity = vec * speed;
+        rb2d.AddForce(vec * speed);
 
-        if(vertical > 0)
+        Debug.Log(rb2d.velocity);
+
+        if (vertical > 0)
         {
             particelSys.Emit(1);
         }

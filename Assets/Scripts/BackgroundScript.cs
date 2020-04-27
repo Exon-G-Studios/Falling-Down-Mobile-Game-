@@ -9,6 +9,5 @@ public class BackgroundScript : MonoBehaviour
     void Update()
     {
         float newPos = Mathf.Repeat(Time.time * scrollSpeed, 20);
-        Debug.Log(newPos);
     }
 }
