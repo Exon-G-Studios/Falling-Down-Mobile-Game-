@@ -33,7 +33,6 @@ public class PlayerScript : MonoBehaviour
         vec = new Vector2(horizontal, vertical);
 
         rb2d.velocity += (vec / 50) * speed;            //Yoktan Aklıma Gelmiş Olan Bir Velocity Formülü, Sürüklenmeyede Yarıyor
-        Debug.Log(rb2d.velocity);
 
 
         //Partikül Sistemini ve Düşme Efektini Devreye Sokan Yapı
