@@ -26,20 +26,20 @@ public class PlayerScript : MonoBehaviour
         shakingEffect = this.gameObject.GetComponent<ShakingEffect>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical") * 1.25f;
         vec = new Vector2(horizontal, vertical);
 
-        rb2d.velocity += (vec / 50) * speed;            //Yoktan Aklıma Gelmiş Olan Bir Velocity Formülü, Sürüklenmeyede Yarıyor
+        rb2d.velocity += (vec / 5) * speed;            //Yoktan Aklıma Gelmiş Olan Bir Velocity Formülü, Sürüklenmeyede Yarıyor
 
 
         //Partikül Sistemini ve Düşme Efektini Devreye Sokan Yapı
         if(vertical > 0)
         {
             animator.SetBool("isFalling", false);
-            particelSys.Emit(1);
+            particelSys.Emit(10);
             if(disableEffect == false) { shakingEffect.isDisable = false; }
         }
         else
