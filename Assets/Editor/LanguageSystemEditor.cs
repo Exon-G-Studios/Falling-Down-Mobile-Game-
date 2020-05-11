@@ -9,6 +9,8 @@ public class LanguageSystemEditor : Editor
     public override void OnInspectorGUI(){
         DrawDefaultInspector();
         LanguageSystem ls_script = (LanguageSystem)target;
+        
+        ls_script.Start();
 
         EditorGUI.BeginChangeCheck();
         GUILayout.Space(10);
