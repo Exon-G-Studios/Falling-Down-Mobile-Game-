@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Collections.Generic;
-using System.Collections;
 using System.IO;
 using UnityEngine;
 using UnityEditor;
@@ -68,8 +66,8 @@ public class LanguageManagerEditor : EditorWindow
 
     void OnGUI(){
         //Get All Languages
-        FileInfo[] Languages_File = DI.GetFiles("*.csv");
-        string[] Languages = Languages_File.Select(f => f.Name).ToArray();
+        FileInfo[] Languages_Files = DI.GetFiles("*.csv");
+        string[] Languages = Languages_Files.Select(f => f.Name).ToArray();
         string[] CurrentLanguages = Languages;
         for(int n = 0; n < CurrentLanguages.Length; n++){
             CurrentLanguages[n] = CurrentLanguages[n].Substring(0, CurrentLanguages[n].Length - 4);
@@ -84,7 +82,7 @@ public class LanguageManagerEditor : EditorWindow
 
         //Choosing Current Language of Game
         GUILayout.BeginHorizontal();
-        GUILayout.Label("Choose Current Language:", EditorStyles.boldLabel, GUILayout.Width(160));
+        GUILayout.Label("All Available Languages:", EditorStyles.boldLabel, GUILayout.Width(160));
         GUILayout.Space(40);
         CurrentLanguageIndex = EditorGUILayout.Popup(CurrentLanguageIndex, CurrentLanguages, GUILayout.Width(151));
         GUILayout.EndHorizontal();
@@ -317,5 +315,6 @@ public class LanguageManagerEditor : EditorWindow
             GUILayout.EndHorizontal();
         }
     }
-
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//END
 }
