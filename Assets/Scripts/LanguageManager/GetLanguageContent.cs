@@ -16,11 +16,11 @@ public class GetLanguageContent : MonoBehaviour
 
     void Start()
     {
+        LanguageSystem = GameObject.Find("LanguageSystem").GetComponent("LanguageSystem") as LanguageSystem;
         thisGameObject = this.gameObject;
         text = this.gameObject.GetComponent(typeof(Text)) as Text;
         text_TMPro = this.gameObject.GetComponent(typeof(TextMeshProUGUI)) as TextMeshProUGUI;
         text_button = this.GetComponentInChildren(typeof(Text)) as Text;
-        LanguageSystem = GameObject.Find("LanguageSystem").GetComponent("LanguageSystem") as LanguageSystem;
     }
     
     void Update()
