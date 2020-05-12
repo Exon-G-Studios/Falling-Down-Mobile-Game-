@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class LanguageSystem : MonoBehaviour
 {
+    //Declarations of variables
     protected string id_content = null, filePath = @"Assets\Localization\Languages\";
     protected string[] languageContent;
     protected int idIndex = -1;
@@ -14,6 +15,8 @@ public class LanguageSystem : MonoBehaviour
     public string[] Languages, CurrentLanguages;
     [HideInInspector]
     public int currentLanguageIndex = -1;
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     //At the start get all languages
     public void Start(){
@@ -25,6 +28,9 @@ public class LanguageSystem : MonoBehaviour
         }
     }
 
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    //Declarations of useful functions
     public string[] GetLanguages(){
         return CurrentLanguages;
     }
@@ -36,25 +42,28 @@ public class LanguageSystem : MonoBehaviour
     }
 
     public string GetLanguageData(string ID){
-        if(currentLanguageIndex >= 0){
-            languageContent = System.IO.File.ReadAllLines(filePath + CurrentLanguages[currentLanguageIndex] + ".csv");
-            for(int line = 0; line < languageContent.Length; line++){
-                if(languageContent[line].Substring(0, languageContent[line].IndexOf(",") - 1) == ID){
-                    idIndex = line;
-                    id_content = languageContent[idIndex].Substring(languageContent[idIndex].IndexOf(",") + 2);
-                    isIDFound = true;
-                    break;
+        try{
+            if(currentLanguageIndex >= 0){
+                languageContent = System.IO.File.ReadAllLines(filePath + CurrentLanguages[currentLanguageIndex] + ".csv");
+                for(int line = 0; line < languageContent.Length; line++){
+                    if(languageContent[line].Substring(0, languageContent[line].IndexOf(",")) == ID){
+                        idIndex = line;
+                        id_content = languageContent[idIndex].Substring(languageContent[idIndex].IndexOf(",") + 2);
+                        isIDFound = true;
+                        break;
+                    }
+                    else{ isIDFound = false; }
                 }
-                else{ isIDFound = false; }
             }
         }
+        catch{}
         if(isIDFound != true){
-            Debug.Log("There isn't a ID that you're looking for. Be sure you've added ID.");
-            id_content = "error";
+            if(Application.isPlaying){ id_content = "error"; }
         }
-        else{
-            Debug.Log("Choose a language !");
-        }
+        if(currentLanguageIndex == -1){ Debug.Log("Choose a language !"); }
         return id_content;
     }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//END
 }
