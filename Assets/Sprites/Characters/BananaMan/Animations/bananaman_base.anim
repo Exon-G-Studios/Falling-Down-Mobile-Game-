@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: basiman_falling
+  m_Name: bananaman_base
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,20 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 7840703501319292305, guid: 1df879791c6f62043a897a8d936f7c03,
-        type: 3}
-    - time: 0.11666667
-      value: {fileID: -648636102958092302, guid: 1df879791c6f62043a897a8d936f7c03,
-        type: 3}
-    - time: 0.23333333
-      value: {fileID: -1480906485473033126, guid: 1df879791c6f62043a897a8d936f7c03,
-        type: 3}
-    - time: 0.36666667
-      value: {fileID: 5566176224569225901, guid: 1df879791c6f62043a897a8d936f7c03,
-        type: 3}
-    - time: 0.5
-      value: {fileID: 7840703501319292305, guid: 1df879791c6f62043a897a8d936f7c03,
-        type: 3}
+      value: {fileID: 21300000, guid: 25b12f26d158d6341a759e1720bb6449, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -53,17 +40,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 7840703501319292305, guid: 1df879791c6f62043a897a8d936f7c03, type: 3}
-    - {fileID: -648636102958092302, guid: 1df879791c6f62043a897a8d936f7c03, type: 3}
-    - {fileID: -1480906485473033126, guid: 1df879791c6f62043a897a8d936f7c03, type: 3}
-    - {fileID: 5566176224569225901, guid: 1df879791c6f62043a897a8d936f7c03, type: 3}
-    - {fileID: 7840703501319292305, guid: 1df879791c6f62043a897a8d936f7c03, type: 3}
+    - {fileID: 21300000, guid: 25b12f26d158d6341a759e1720bb6449, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
