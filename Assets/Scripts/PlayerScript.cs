@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -7,7 +8,7 @@ public class PlayerScript : MonoBehaviour
 {
     protected Rigidbody2D rb2d;
     public float speed = 5;
-    public bool disableShakingEffect = false, disableRotationEffect = false;
+    public bool disableParticulSystems = false ,disableShakingEffect = false, disableRotationEffect = false;
     Vector2 vec;
     int slot;
 
@@ -48,12 +49,14 @@ public class PlayerScript : MonoBehaviour
         {
             try{
                 animator.SetBool("isFalling", false);
-                particelSysMain.Emit(10);
-                for(int particles = 0; particles < particleSysMulti.Length; particles++){
-                    particleSysMulti[particles].Emit(10);
-                 }
-                if(disableShakingEffect == false) { shakingEffect.isDisable = false; }
-                if(disableRotationEffect == false) { rotationEffect.isDisable = false; Debug.Log("I'M Working");}
+                if(disableParticulSystems != true){
+                    particelSysMain.Emit(10);
+                    for(int particles = 0; particles < particleSysMulti.Length; particles++){
+                        particleSysMulti[particles].Emit(10);
+                    }
+                }
+                if(disableShakingEffect == false) { shakingEffect.isDisable = false;}
+                if(disableRotationEffect == false) { rotationEffect.isDisable = false;}
             }
             catch{}
         }
@@ -62,10 +65,9 @@ public class PlayerScript : MonoBehaviour
             try{
                 animator.SetBool("isFalling", true);
                 if(disableShakingEffect == true) { shakingEffect.isDisable = true; }
-                if(disableRotationEffect == false) { rotationEffect.isDisable = true;}
+                if(disableRotationEffect == false) { rotationEffect.isDisable = true; }
             }
             catch{}
         }
-
     }
 }

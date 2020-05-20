@@ -13,19 +13,20 @@ public class RotationEffect : MonoBehaviour
     void Start()
     {
         player = this.gameObject;
-        if(RotationSpeed >= 10)
-        {
-            RotationSpeed = 10;
-        }
+        if(RotationSpeed >= 15) { RotationSpeed = 15; }
     }
 
     void Update()
     {
+        if(RotationSpeed >= 15) { RotationSpeed = 15; }
         if(isDisable == false)
         {
-            Debug.Log("I'm working");
-            rot_z = (Random.Range(0f, 2f) * RotationSpeed);
-            player.transform.rotation = Quaternion.Slerp(player.transform.rotation, Quaternion.Euler(0, 0, rot_z), Time.deltaTime);
+            rot_z += (Random.Range(0f, 5f) * RotationSpeed);
+            player.transform.rotation = Quaternion.Slerp(player.transform.rotation, Quaternion.Euler(0, 0, rot_z * -1f), 2);
+        }
+        else{
+            player.transform.rotation = Quaternion.Slerp(player.transform.rotation, Quaternion.Euler(0, 0, 0), 0.1f);
+            rot_z = 0;
         }
     }
 }
