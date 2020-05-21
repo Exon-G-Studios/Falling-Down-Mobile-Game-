@@ -13,14 +13,12 @@ public class ShakingEffect : MonoBehaviour
     void Start()
     {
         player = this.gameObject;
-        if (SpacingAmount >= 10)
-        {
-            SpacingAmount = 10;
-        }
+        if(SpacingAmount >= 10) { SpacingAmount = 10; }
     }
 
     void Update()
     {
+        if(SpacingAmount >= 10) { SpacingAmount = 10; }
         if(isDisable == false)
         {
             cor_x = (Random.Range(-1.3f, 1.3f) * SpacingAmount) / 65;
