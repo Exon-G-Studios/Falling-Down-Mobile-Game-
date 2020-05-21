@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.Reflection;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,9 +19,10 @@ public class SANDLSystem : MonoBehaviour
 {
     //Veri Etiketi Oluşturma Bölümü----------------------------------------------------------------------------------------------------------
     //Veriyi Değiştirmek İçin Altakileri Kullan !
-    public coinData _coindData;
+    public coinData _coinData;
     public levelData _levelData;
     public characterData _characterData;
+    public levelDataCopy _levelDataCopy;
     //Veriyi Değiştirmek İçin Üstekileri Kullan !
     //---------------------------------------------------------------------------------------------------------------------------------------
     
@@ -30,7 +33,7 @@ public class SANDLSystem : MonoBehaviour
     [System.Serializable]
     public class coinData       //Veriyi Değiştirmek İçin Bunu Kullanma //Ama Yeni Veri Tutucuyu Buraya Ekle (Variable)
     {
-        public int currentCoint;
+        public int currentCoin;
     }
 
     [System.Serializable]
@@ -54,6 +57,16 @@ public class SANDLSystem : MonoBehaviour
 
     }
 
+    [System.Serializable]
+    public class levelDataCopy
+    {
+        //private int[,] meow = new int[2,2] { {1,2}, {1,2} };
+
+        //public int[,] Meow { get{ return meow; } }
+
+        public int[,] numbers = new int[2,2] { {1,2}, {3,4} };
+    }
+
     //Veri Oluşturma Örneği
     //[System.Serializable]
     //public class istediğin Data
@@ -63,11 +76,18 @@ public class SANDLSystem : MonoBehaviour
 
     //---------------------------------------------------------------------------------------------------------------------------------------
 
+    void Start(){
+        RunSANDL();
+    }
+
+    //---------------------------------------------------------------------------------------------------------------------------------------
+
     public void saveData(){
-        string[] data = new string[3];                  //Yazılacak Toplam Veri Miktarının Sayısını Burdan Değiştir !
-        data[0] = JsonUtility.ToJson(_coindData);
+        string[] data = new string[4];                  //Yazılacak Toplam Veri Miktarının Sayısını Burdan Değiştir !
+        data[0] = JsonUtility.ToJson(_coinData);
         data[1] = JsonUtility.ToJson(_levelData);
         data[2] = JsonUtility.ToJson(_characterData);
+        data[3] = JsonUtility.ToJson(_levelDataCopy);
         //Yeni Data Girme Örneği
         //data[3] = JsonUtility.ToJson(istediğin data (fakat bu dataya ulaşmak için |veri etiketi| oluşturmalısın ! ));
         System.IO.File.WriteAllLines(filePath, data);
@@ -84,9 +104,10 @@ public class SANDLSystem : MonoBehaviour
 
     public void loadData(){
         string[] data = System.IO.File.ReadAllLines(filePath);
-        _coindData = JsonUtility.FromJson<coinData>(data[0]);
+        _coinData = JsonUtility.FromJson<coinData>(data[0]);
         _levelData = JsonUtility.FromJson<levelData>(data[1]);
         _characterData = JsonUtility.FromJson<characterData>(data[2]);
+        _levelDataCopy = JsonUtility.FromJson<levelDataCopy>(data[3]);
         //Data Alma Örneği
         //veri etiketi = JsonUtility.FromJson<veri oluşturma class'ı>(veri etiketinin bulunduğu veri masası değeri);
     }
@@ -96,5 +117,18 @@ public class SANDLSystem : MonoBehaviour
         loadData();
     }
 
+    public void doThis(){
+        JSONMulti.ToJson(_levelDataCopy);
+    }
+
+}
+
+
+//Burdan sonrası JsonUtility Multi-Array'leri halledemediğinden kendi json utility'imi yazdım.
+//Burdan sonrası baya karmaşık.
+//Custom JSON Parser Named "JSONMulti" ------------------------------------------------------------------------------------------------------
+
+public class JSONMulti
+{
 }
 
