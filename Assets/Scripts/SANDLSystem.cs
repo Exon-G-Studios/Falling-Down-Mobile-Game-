@@ -5,12 +5,16 @@ using UnityEngine;
 
 public class SANDLSystem : MonoBehaviour
 {
+    //Veri Etiketi Oluşturma Bölümü----------------------------------------------------------------------------------------------------------
     //Veriyi Değiştirmek İçin Altakileri Kullan !
     public coinData _coindData;
     public levelData _levelData;
     public characterData _characterData;
     //Veriyi Değiştirmek İçin Üstekileri Kullan !
+    //---------------------------------------------------------------------------------------------------------------------------------------
     protected string filePath = @"Assets\Data\allData.json";
+
+    //Veri Oluşturma Bölümü------------------------------------------------------------------------------------------------------------------
 
     [System.Serializable]
     public class coinData       //Veriyi Değiştirmek İçin Bunu Kullanma //Ama Yeni Veri Tutucuyu Buraya Ekle (Variable)
@@ -30,11 +34,22 @@ public class SANDLSystem : MonoBehaviour
 
     }
 
+    //Veri Oluşturma Örneği
+    //[System.Serializable]
+    //public class istediğin Data
+    //{
+        //İstenilen her veri
+    //}
+
+    //---------------------------------------------------------------------------------------------------------------------------------------
+
     public void saveData(){
-        string[] data = new string[3];
+        string[] data = new string[3];                  //Yazılacak Toplam Veri Miktarının Sayısını Burdan Değiştir !
         data[0] = JsonUtility.ToJson(_coindData);
         data[1] = JsonUtility.ToJson(_levelData);
         data[2] = JsonUtility.ToJson(_characterData);
+        //Yeni Data Girme Örneği
+        //data[3] = JsonUtility.ToJson(istediğin data (fakat bu dataya ulaşmak için |veri etiketi| oluşturmalısın ! ));
         System.IO.File.WriteAllLines(filePath, data);
     }
 
