@@ -8,6 +8,14 @@ public class MenuScript : MonoBehaviour
     public GameObject settingsMenu;
     public GameObject quitMenu;
     public GameObject charachter;
+    public GameObject charachterMenu;
+
+    public void openCharachterMenu()
+    {
+        gameObject.SetActive(false);
+        charachter.gameObject.SetActive(false);
+        charachterMenu.gameObject.SetActive(true);
+    }
     public void play()
     {
         gameObject.SetActive(false);

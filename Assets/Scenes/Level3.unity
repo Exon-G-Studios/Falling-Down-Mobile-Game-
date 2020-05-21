@@ -975,7 +975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b41cc4e291bb34baefb39cddc4555a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin: 0
   score: 0
   winScore: 100
   heal: 10
@@ -983,7 +982,7 @@ MonoBehaviour:
   tHeal: {fileID: 38920512}
   tCoin: {fileID: 887313100}
   GameOver: {fileID: 259867609}
-  coinObject: {fileID: 887313098}
+  coin: {fileID: 887313098}
 --- !u!4 &1180602622
 Transform:
   m_ObjectHideFlags: 0
